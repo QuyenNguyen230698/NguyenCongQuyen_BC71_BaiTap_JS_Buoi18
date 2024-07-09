@@ -10,7 +10,10 @@
         width: 1200px;
         margin: 0 auto;
     }
-    #showKQ{
+    #showKQ,
+    #showArray,
+    #showMang,
+    #showKQ2 {
         display: none;
         font-size: 20px;
         text-transform: uppercase;
@@ -29,7 +32,7 @@
     button:hover{
         background-color: darkorange;
         color: #fff;
-        border: none;
+        border: 1px solid #fff;
     
     }
     input{
@@ -55,8 +58,18 @@
         <label for="">Nhập số nguyên thứ ba:</label>
         <input type="text" id="inputThree" value="">
         <br>
+        <label for="">Vị trí 1:</label>
+        <input type="text" id="changeOne" value="0" min="0">
+        <label for="">Vị trí 2:</label>
+        <input type="text" id="changeTwo" value="0" min="0">
+        <button onclick="changePosition()" id="checkNums">Đổi chỗ</button>
+        <br>
+        <div id="showArray"></div>
         <button onclick="doSomeThing()" id="checkNums">Kiểm tra</button>
+        <button onclick="sapXepTang()" id="sapXep">Xếp lại mảng</button>
+        <div id="showMang"></div>
         <div id="showKQ"></div>
+        <div id="showKQ2"></div>
     </div>
 
     <script src="/JS/index.js"></script>
