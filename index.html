@@ -5,8 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    #showKQ{
+        display: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    button{
+        padding: 10px;
+        font-size: 16px;
+        text-transform: uppercase;
+        background-color: orange;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid #000;
+        margin: 10px 0;
+    }
+    button:hover{
+        background-color: darkorange;
+        color: #fff;
+        border: none;
+    
+    }
+    input{
+        padding: 6px;
+        margin: 10px 0;
+        font-size: 14px;
+        border-radius: 10px;
+        border: 1px solid #000;
+    }
+    label{
+        font-size: 16px;
+        font-weight: 700;
+    }
+</style>
 <body>
     
+    <div class="container">
+        <h2 style="text-transform: uppercase;color: orange;">bài tập array</h2>
+        <label for="">Nhập số nguyên thứ nhất:</label>
+        <input type="text" id="inputOne" value="">
+        <label for="">Nhập số nguyên thứ hai:</label>
+        <input type="text" id="inputTwo" value="">
+        <label for="">Nhập số nguyên thứ ba:</label>
+        <input type="text" id="inputThree" value="">
+        <br>
+        <button onclick="doSomeThing()" id="checkNums">Kiểm tra</button>
+        <div id="showKQ"></div>
+    </div>
 
     <script src="/JS/index.js"></script>
 </body>
