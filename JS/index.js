@@ -61,15 +61,39 @@ function doSomeThing() {
   }
   document.getElementById("showKQ2").style.display = "block";
   document.getElementById("showKQ2").innerHTML = `
-  <p>Số nguyên tố đầu tiên trong mảng là: ${soNguyenToDauTien}</p>`;
-  
+  <p>8.Số nguyên tố đầu tiên trong mảng là: ${soNguyenToDauTien}</p>`;
+  //9. Nhập thêm số thực vào mảng, tìm trong mảng có bao nhiêu số nguyên ?
+var countInterger = 0;
+for (let check of my_array){
+    if (Number.isInteger(check)){
+        countInterger++;
+    }
+}
+//10. so sánh số dương và số âm xem số nào nhiều hơn trong mảng
+var countDuong = 0;
+var countAm = 0;
+for (let num of my_array){
+    if (num > 0){
+        countDuong++;
+    } else {
+        countAm++;
+    }   
+}
+var bt10 = '';
+if (countDuong > countAm){
+    bt10 = 'Số dương nhiều hơn số âm';
+    } else {
+    bt10 = 'Số âm nhiều hơn số dương';
+} 
 
   document.getElementById("showKQ").innerHTML = `
-  <p>Tổng các số dương đã nhập là: ${sum}</p>
-  <p>số dương trong mảng đã nhập là: ${soDuong}</p>
-  <p>số nhỏ nhất trong mảng đã nhập là: ${minValue}</p>
-  <p>số dương nhỏ nhất trong mảng đã nhập là: ${minValue2}</p>
-  <p>số chẵn cuối cùng trong mảng đã nhập là: ${lastSoChan}</p>`;
+  <p>1.Tổng các số dương đã nhập là: ${sum}</p>
+  <p>2.số dương trong mảng đã nhập là: ${soDuong}</p>
+  <p>3.số nhỏ nhất trong mảng đã nhập là: ${minValue}</p>
+  <p>4.số dương nhỏ nhất trong mảng đã nhập là: ${minValue2}</p>
+  <p>5.số chẵn cuối cùng trong mảng đã nhập là: ${lastSoChan}</p>
+  <p>9.trong mảng có: ${countInterger} số nguyên</p>
+  <p>10.trong mảng có: ${bt10}</p>`;
 
   document.getElementById("showKQ").style.display = "block";
   document.getElementById("showArray").style.display = "block";
@@ -111,7 +135,7 @@ function changePosition() {
     my_array[viTri1] = my_array[viTri2];
     my_array[viTri2] = temp;
     document.getElementById("showArray").textContent =
-      "Mảng sau khi đổi chỗ: " + my_array.join(", ");
+      "6.Mảng sau khi đổi chỗ: " + my_array.join(", ");
   } else {
     alert("Vui lòng nhập vào vị trí hợp lệ và khác nhau.");
   }
@@ -124,6 +148,6 @@ function sapXepTang(){
     })
     document.getElementById("showMang").style.display = "block";
     document.getElementById("showMang").innerHTML = `
-  <p>Đã sắp xếp mảng theo thứ tự tăng dần: ${my_array}</p>`;
+  <p>7.Đã sắp xếp mảng theo thứ tự tăng dần: ${my_array}</p>`;
 }
 
